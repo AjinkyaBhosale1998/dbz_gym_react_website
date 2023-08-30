@@ -5,10 +5,14 @@ import fimage2 from "../images/2.svg";
 import fimage3 from "../images/3.svg";
 import fimage4 from "../images/4.svg";
 
+
 function Feature() {
   return (
     <div id="feature">
-      <h1>FEATURE</h1>
+      <h1 style={{ color: "orange", textAlign: "center" }}>
+        {" "}
+        CLICK ON THE FEATURES{" "}
+      </h1>
       <div className="a-container">
         <Featurebox image={fimage1} title="weightLifting" />
         <Featurebox image={fimage2} title="Specific Muscle" />
