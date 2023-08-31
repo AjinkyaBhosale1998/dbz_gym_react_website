@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../images/logo.png';
-import { Link } from 'react-scroll';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -25,11 +25,11 @@ function Navbar() {
         <span className='nav-icon'></span>
       </label>
       <ul className='menu'>
-        <li><Link to='main' smooth={true} duration={1000}>Header</Link></li>
-        <li><Link to='feature' smooth={true} duration={1000}>Features</Link></li>
-        <li><Link to='presentaion' smooth={true} duration={1000}>Offer</Link></li>
-        <li><Link to='about' smooth={true} duration={1000}>About</Link></li>
-        <li><Link to='contact' smooth={true} duration={1000}>Contact</Link></li>
+        <li><Link to='main' smooth={true} duration={5000}>Header</Link></li>
+        <li><Link to='feature' smooth={true} duration={5000}>Features</Link></li>
+        <li><Link to='presentaion' smooth={true} duration={5000}>Offer</Link></li>
+        <li><Link to='about' smooth={true} duration={5000}>About</Link></li>
+        <li><Link to='contact' smooth={true} duration={5000}>Contact</Link></li>
       </ul>
     </nav>
   );

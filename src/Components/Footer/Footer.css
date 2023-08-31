@@ -1,0 +1,128 @@
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-section {
+    margin: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.5rem;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .social-icons i {
+    margin-right: 10px;
+  }
+  
+  .contact-info {
+    margin-top: 18px;
+  }
+  
+  .copyright {
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .copyright button {
+   
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+  }
+  
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-column {
+    flex: 1;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .search-bar {
+    padding: 5px;
+    background-color: #333;
+    border: 1px solid #FF5733;
+    border-radius: none;
+    width: 250px;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .search-bar:focus {
+    border-color: #FF5733;
+  }
+  
+  .sign-up-button {
+    padding: 6px 15px;
+    background-color: #FF7F26;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: -90px;
+    outline: none;
+    transition: background-color 0.3s;
+  }
+  
+  .sign-up-button:hover {
+    background-color: #FF7F26;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 1rem;
+  }
+  
+  .footer-section.follow {
+    text-align: left;
+    margin-left: 175px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 30px;
+    margin-left: -70px;
+  }
+  
+  .social-icons svg {
+    font-size: 25px;
+    transition: 0.5s;
+    color: #fff;
+  }
+  
+  .social-icons svg:hover {
+    transform: translateY(-7px);
+  }
+  
+  .copyright {
+    text-align: right;
+    margin-right: 100px;
+  }
+  

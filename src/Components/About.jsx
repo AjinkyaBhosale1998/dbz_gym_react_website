@@ -1,15 +1,7 @@
 import React from "react";
 import aboutimage from "../images/about.png";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 function About() {
-  
-  const {text} = useTypewriter ({
-    words: ['Devloper', 'Designer', 'Photographer'],
-    loop: {},
-    typeSpeed: 120,
-    deleteSpeed:80,
-  });
 
   return (
     <div id="about">
@@ -18,13 +10,13 @@ function About() {
       </div>
       <div className="about-text">
         <h1>
-        <span style={{ color: 'white' }}>Learn More{' '}</span> 
+        <span style={{ color: 'white' }}>Learn More</span> 
         <span style={{ color: 'orange' }}>About Us </span> 
-        <span style={{ color: 'orange' }}>{text}</span> {text}
         </h1>
-        <p>
-          skjada akjfdsa kjbsd kjbdssjdf sjkdf kjsdbcjsmhdb skdjvb jbkv
-          skdjvbdsbjkv bvjd bkv mbv mjb
+        <p><br/>
+        If you want to be shredded, healthy than you should do the following : <br/><br/>Eliminate inflammatory foods, challenge your body physically, eat for your biology, reduce stagnation with movement, sweat frequently, spend some time in nature, get barefoot and regularly let your skin absorb sunlight.
+
+        <br/><br/>Your body is the vessel in which you get to experience life. Treat it with respect and your life can be significantly enhanced.
         </p>
         <button>READ MORE</button>
       </div>
