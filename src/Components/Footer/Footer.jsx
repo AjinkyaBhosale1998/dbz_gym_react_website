@@ -3,13 +3,14 @@ import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faFacebook, faTwitter, faLinkedin ,faInstagram , faYoutube } from '@fortawesome/free-brands-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import footerlogo from "../../images/footerlogo.png";
 
 
 function Footer() {
   function scrollToTop() {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // This adds smooth scrolling animation  
+      behavior: 'smooth', 
     });
   }
 
@@ -74,7 +75,9 @@ function Footer() {
     </div>
 </div>
 
-
+ <div className="playstore" >
+      <img src={footerlogo} alt="Footer Logo" style={{ width: '40%'}}/>
+    </div>
     
     
     <div className="copyright">
@@ -86,7 +89,6 @@ function Footer() {
     </div>
   </div>
 </footer>
-
   );
 }
 

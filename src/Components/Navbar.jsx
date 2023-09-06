@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import logo from '../images/logo.png';
 import { Link, animateScroll as scroll } from "react-scroll";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
+  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
 
   const changeBackground = () => {
     if (window.scrollY >= 50) {
@@ -30,6 +32,16 @@ function Navbar() {
         <li><Link to='presentaion' smooth={true} duration={5000}>Offer</Link></li>
         <li><Link to='about' smooth={true} duration={5000}>About</Link></li>
         <li><Link to='contact' smooth={true} duration={5000}>Contact</Link></li>
+        { isAuthenticated ? (
+        <li>
+        <button onClick={() => logout({ returnTo: window.location.origin })}>
+          LOG OUT </button>
+        </li>
+        ) : (
+        <li>
+          <button onClick={() => loginWithRedirect()} className="login-button">Log In</button>
+        </li>
+        )}
       </ul>
     </nav>
   );

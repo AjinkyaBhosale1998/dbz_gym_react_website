@@ -10,7 +10,7 @@ function About() {
       </div>
       <div className="about-text">
         <h1>
-        <span style={{ color: 'white' }}>Learn More</span> 
+        <span style={{ color: 'white' }}>Learn More </span> 
         <span style={{ color: 'orange' }}>About Us </span> 
         </h1>
         <p><br/>

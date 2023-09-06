@@ -93,7 +93,7 @@ nav ul{
 nav ul li a{
     font-family: 'Lato';
 	height:40px;
-	line-height: 43px;
+	line-height: 40px;
 	margin: 3px;
 	padding: 0px 22px;
 	display: flex;
@@ -147,6 +147,32 @@ nav .menu-btn,
 	color:#ffffff;
 }
 
+
+.login-button {
+    font-family: 'Lato';
+    height: 40px;
+    line-height: 40px;
+    margin: 3px;
+    padding: 0px 22px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 350;
+    color: #ffffff;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .login-button:hover {
+    background-color: #FF7F26;
+    color: #ffffff;
+    box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336);
+    transition: all ease 0.2s;
+  }
+  
+
 .header-btns{
     display: flex;
     margin-top: 40px;
@@ -192,8 +218,6 @@ nav .menu-btn,
     display: flex;
     justify-content: center;
     align-content: center;
-
-
 }
 .a-box{
     background-color: #000000;

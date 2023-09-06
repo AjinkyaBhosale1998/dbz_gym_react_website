@@ -33,15 +33,6 @@ const postData = async (e) => {
             }),
         }
     );
-
-    if (res) {
-        setUser({
-            name: "",
-            email: "",
-            message: ""
-        });
-        alert("Data Stored Successfully...")
-    }
 };
 
     return (

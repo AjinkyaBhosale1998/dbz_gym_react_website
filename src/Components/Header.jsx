@@ -1,6 +1,14 @@
 import React from "react";
+import { useAuth0 } from '@auth0/auth0-react';
 
 function Header() {
+
+  const { loginWithRedirect } = useAuth0();
+
+  const handleLoginClick = () => {
+    loginWithRedirect();
+  }
+
   return (
     <div id="main">
       <div className="name">
@@ -15,9 +23,9 @@ function Header() {
           Build Your Body And Fitness With Professioanl Touch{" "}
         </p>
         <div className="header-btns">
-          <a href="#" className="header-btn" style={{ textDecoration: 'none' }} >
+        <button onClick={handleLoginClick} className="header-btn" style={{ textDecoration: 'none' }}>
             BECOME SUPER SAIYYAN
-          </a>
+          </button>
         </div>
       </div>
     </div>
