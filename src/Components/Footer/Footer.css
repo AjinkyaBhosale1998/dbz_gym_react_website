@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+body, ul, li, a, footer, .footer-section h3, .social-icons i, .contact-info, .copyright, .search-bar, .sign-up-button {
+  font-family: 'Poppins', sans-serif;
+}
+
 ul, li {
   list-style: none;
   margin: 0;
@@ -124,4 +130,7 @@ footer {
 .copyright {
   text-align: right;
   margin-right: 100px;
+}
+.playstore:hover {
+  cursor: pointer;
 }

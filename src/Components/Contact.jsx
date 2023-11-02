@@ -63,7 +63,7 @@ const postData = async (e) => {
             value={user.message}
             onChange={getUserData}
           ></textarea>
-          <input type="submit" value="Send" onClick={postData} />
+          <input type="button" type="submit" value="Send" onClick={postData} />
         </form>
       </div>
     );
