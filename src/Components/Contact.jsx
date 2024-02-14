@@ -19,7 +19,7 @@ const postData = async (e) => {
     e.preventDefault();
     const { name, email, message } = user;
 
-    const res = await fetch(
+    await fetch(
         "https://react-dbz-gym-website-default-rtdb.firebaseio.com/DBZ-GYM.json"
         ,{
             method: "POST",
@@ -37,7 +37,7 @@ const postData = async (e) => {
 
     return (
       <div id="contact">
-        <form id="contact-form" method="POST">
+<form id="contact-form" method="POST" onSubmit={postData}>
           <h1>
             <span style={{ color: "orange" }}> Contact </span> Us
           </h1>
@@ -63,7 +63,7 @@ const postData = async (e) => {
             value={user.message}
             onChange={getUserData}
           ></textarea>
-          <input type="button" type="submit" value="Send" onClick={postData} />
+          <input type="submit" value="Send" />
         </form>
       </div>
     );

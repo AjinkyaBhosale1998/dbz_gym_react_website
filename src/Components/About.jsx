@@ -6,11 +6,18 @@ import demo3 from "../images/demo3.mp4";
 
 function About() {
   const videoList = [demo1, demo2, demo3];
+  const totalPages = videoList.length;
 
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
   const handleVideoEnd = () => {
-    setCurrentVideoIndex((prevIndex) => prevIndex + 1);
+    setCurrentVideoIndex((prevIndex) => {
+      if (prevIndex < totalPages - 1) {
+        return prevIndex + 1;
+      } else {
+        return 0;
+      }
+    });
   };
 
   const playPreviousVideo = () => {
@@ -20,32 +27,42 @@ function About() {
   };
 
   const playNextVideo = () => {
-    if (currentVideoIndex < videoList.length - 1) {
+    if (currentVideoIndex < totalPages - 1) {
       setCurrentVideoIndex(currentVideoIndex + 1);
     }
   };
 
   useEffect(() => {
-    if (currentVideoIndex >= videoList.length) {
+    if (currentVideoIndex >= totalPages) {
       setCurrentVideoIndex(0);
     }
-  }, [currentVideoIndex, videoList]);
+  }, [currentVideoIndex, totalPages]);
 
   return (
     <div id="about" style={{ display: "flex", alignItems: "center" }}>
-      <div className="video-player" style={{ flex: 1.3 }}>
+      <div className="video-player" style={{ flex: 1, alignSelf: "center" }}>
         {videoList.length > 0 && (
           <ReactPlayer
-            url={videoList[currentVideoIndex]} controls onEnded={handleVideoEnd} playing width="100%" height="100%"
+            url={videoList[currentVideoIndex]}
+            controls={true}
+            onEnded={handleVideoEnd}
+            playing
+            width="100%"
+            height="100%"
           />
         )}
-        
-        <button type="button"style={{ margin: "20px" }} onClick={playPreviousVideo}>Previous</button>
-        <button type="button"style={{ margin: "20px" }} onClick={playNextVideo}>Next</button>
+
+        <div style={{ display: "flex", justifyContent: "space-between", margin: "20px" }}>
+          <button type="button" className="btn btn-secondary" onClick={playPreviousVideo}>
+            Previous
+          </button>
+          <button type="button" className="btn btn-secondary" onClick={playNextVideo}>
+            Next
+          </button>
+        </div>
       </div>
 
-
-      <div className="about-text" style={{ flex: 1, padding: "10px", marginLeft:"100px" }}>
+      <div className="about-text" style={{ flex: 1, padding: "10px", marginLeft: "100px", alignSelf: "center" }}>
         <h1>
           <span style={{ color: "white" }}>Learn More </span>
           <span style={{ color: "orange" }}>About Us </span>
@@ -64,8 +81,9 @@ function About() {
           Your body is the vessel in which you get to experience life. Treat it
           with respect and your life can be significantly enhanced.
         </p>
+        <h5>Push through the pain, giving up hurts more. – <br/>
+        <span style={{ color: "orange" }}>Prince Vegeta</span></h5>
       </div>
-
     </div>
   );
 }

@@ -3,6 +3,8 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 function Header() {
 
+  const { loginWithRedirect } = useAuth0();
+  
   const [text, setText] = useState("THIS COULD BE YOU");
 
   useEffect(() => {
@@ -16,8 +18,6 @@ function Header() {
       clearInterval(intervalId);
     };
   }, []);
-
-  const { loginWithRedirect } = useAuth0();
 
   const handleLoginClick = () => {
     loginWithRedirect();

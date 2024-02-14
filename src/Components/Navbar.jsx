@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../images/logo.png';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 import { useAuth0 } from "@auth0/auth0-react";
 
 
@@ -35,7 +35,7 @@ function Navbar() {
         <span className='nav-icon'></span>
       </label>
       <ul className='menu'>
-        <li><ScrollLink to='main' smooth={true} duration={1000}>Header</ScrollLink></li>
+        <li><ScrollLink to='main' smooth={true} duration={1000}>Home</ScrollLink></li>
         <li><ScrollLink to='feature' smooth={true} duration={1000}>Features</ScrollLink></li>
         <li><ScrollLink to='presentaion' smooth={true} duration={1000}>Offer</ScrollLink></li>
         <li><ScrollLink to='about' smooth={true} duration={1000}>About</ScrollLink></li>

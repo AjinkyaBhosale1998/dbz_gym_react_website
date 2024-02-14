@@ -11,7 +11,7 @@ function Gearitems(props) {
           <h5 className="card-title" >{props.title}</h5>
           <h5 className="card-title">₹ {props.price}</h5>
           <p className="card-text">{props.desc}</p>
-          <button className="btn btn-warning" style={{ position: 'absolute', bottom: '10px', borderRadius: '20px' }}>View Details <FontAwesomeIcon icon={faArrowRight} /></button>
+          <button className="btn btn-warning" style={{ position: 'absolute', bottom: '0px', right:'10px', borderRadius: '5px' }}>View Details <FontAwesomeIcon icon={faArrowRight} /></button>
         </div>
       </div>
     </div>
