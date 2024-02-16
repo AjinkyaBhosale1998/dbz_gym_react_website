@@ -1,3 +1,7 @@
+
+![dbz-gym](https://github.com/AjinkyaBhosale1998/dbz_gym_react_website/assets/91610163/e1aed432-0638-4ec6-9924-d2ac9f09220e)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
